@@ -30,19 +30,19 @@ function readData(input){
     //10|11
     //12|14
     //appears like [[10,11],[12,14]]
-    const rules = rulesStr.split("\n").map(rule => rule.split("|").map(Number));
+    const rules = rulesStr.split("\r\n").map(rule => rule.split("|").map(Number));
     //do the same for the updates
     //10,11,12,14
     //10,12,11
     //[[10,11,12,14],[10,12,11]]
-    const updates = updatesStr.split("\n").map(update => update.split(",").map(Number));
+    const updates = updatesStr.split("\r\n").map(update => update.split(",").map(Number));
     let sum = 0;
 
     //loop through each update and pass it to the checkOrder function
     updates.forEach(update =>{
-        if (checkCorrectOrder(rules, updates)){
+        if (checkCorrectOrder(rules, update)){
             //if the update does not violate any rules, find middle number at add to sum
-            var middle = findMiddle(update);
+            const middle = findMiddle(update);
             sum += middle;
         }
     });
@@ -55,5 +55,6 @@ fs.readFile('C:/Users/grran/development/AdventOfCode2024/Day5/puzzle.txt', 'utf8
         console.error(err);
         return;
     }
-    console.log(readData(data));
+    var sum = readData(data);
+    console.log(sum);
 });
