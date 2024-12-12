@@ -1,4 +1,4 @@
-Day 5 solved using JavaScript and a little NodeJS
+Day 5 solved using JavaScript and NodeJS for file reading
 
 --- Day 5: Print Queue ---
 
