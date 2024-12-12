@@ -1,5 +1,7 @@
 Day 5 solved using JavaScript and NodeJS for file reading
 
+Puzzle details are as follows:
+
 --- Day 5: Print Queue ---
 
 Satisfied with their search on Ceres, the squadron of scholars suggests subsequently scanning the stationery stacks of sub-basement 17.
